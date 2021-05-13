@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackJack</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+<body>
+    <header class="titulo"> 
+        BlackJack
+     </header>    
+
+    <div class="row mt-2">
+        <div id="divBotones" class="col text-center">
+            <button id="btnNuevo" class="btn btn-danger"> Nuevo Juego </button>
+            <button id="btnPedir"  disabled="true" class="btn btn-primary"> Pedir Carta </button>
+            <button id="btnDetener" disabled="true" class="btn btn-primary"> Detener </button>
+        </div>
+    </div>
+
+    <div class="row container">
+        <div class="col">
+            <h1> Jugador 1 - <small>0</small> </h1>
+            <div id="jugador-cartas" class="divCartas"></div>
+        </div>
+    </div>
+
+    <div class="row container mt-2">
+        <div class="col">
+            <h1> Computadora - <small> 0 </small> </h1>
+            <div id="computadora-cartas" class="divCartas"></div>
+        </div>
+    </div>
+
+    <script src="assets/js/underscore-min.js"></script>
+    <script src="assets/js/juego-min.js"></script>
+
+    <script>
+        document.querySelector('#btnNuevo').addEventListener('click', () => {
+            miModulo.nuevoJuego();
+        })
+    
+    </script>
+
+
+</body>
+</html>
